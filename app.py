@@ -20,15 +20,26 @@ def get_response():
                         {
                             "text": 
                             f'''
-                            Generate 18 multiple choice questions with 4 options from the {course}. It must include 10 easy, 5 medium and 3 hard questions. It should cover all the concepts present in the {course} and all the modules present in the {course}.
+                            Generate 18 multiple choice questions with 4 options from the {course}. It must include 10 easy, 5 medium and 3 hard questions in order. It should cover all the concepts present in the {course} and all the modules present in the {course}.
                             Give the output strictly in json format:
                             {{
                                 "quizName": "string",
-                                "questions" : [
+                                "easy" : [
                                     {{
                                         "question": "string",
                                         "options": ["strings"],
-                                        "difficulty": "easy/medium/hard",
+                                        "correctOption": "Number" // index of correct option
+                                    }}],
+                                "medium" : [
+                                    {{
+                                        "question": "string",
+                                        "options": ["strings"],
+                                        "correctOption": "Number" // index of correct option
+                                    }}],
+                                "hard" : [
+                                    {{
+                                        "question": "string",
+                                        "options": ["strings"],
                                         "correctOption": "Number" // index of correct option
                                     }}],
                                         
